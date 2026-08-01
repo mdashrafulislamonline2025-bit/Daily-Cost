@@ -18,13 +18,13 @@ import {
 /* -------------------------------------------------------------------------
    0. Constants
    ------------------------------------------------------------------------- */
-const EXPENSE_CATEGORIES = ["Fuel", "Food", "Hotel", "Transport", "Printing", "Office", "Internet", "Others"];
+const EXPENSE_CATEGORIES = ["Food", "Transport", "Printing", "Office", "Internet", "Others"];
 const PAYMENT_METHODS = ["Cash", "Bank Transfer", "bKash", "Nagad", "Reimbursement", "Other"];
 const VOUCHER_STATUSES = ["Pending", "Submitted", "Approved", "Rejected"];
 const CURRENCY_SYMBOL = "৳";
 
 const CATEGORY_COLORS = {
-  Fuel: "#2563EB", Food: "#0D9488", Hotel: "#7C3AED", Transport: "#D97706",
+  Food: "#0D9488", Transport: "#D97706",
   Printing: "#DB2777", Office: "#0EA5E9", Internet: "#65A30D", Others: "#64748B",
 };
 
