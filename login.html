@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign In · Expense Manager</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="login">
+
+  <button class="icon-btn theme-toggle login-theme-toggle" title="Toggle theme" aria-label="Toggle dark mode"></button>
+
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="brand-mark" style="width:52px;height:52px;font-size:22px;border-radius:16px;">৳</div>
+        <div>
+          <div class="login-title">Expense Manager</div>
+          <div class="login-sub">Sign in to track your expenses</div>
+        </div>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="field mb-16">
+          <label for="login-email">Email address</label>
+          <input type="email" id="login-email" placeholder="you@company.com" autocomplete="username" required />
+        </div>
+        <div class="field mb-16">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+        <div class="error-text" id="login-error"></div>
+        <button type="submit" class="btn btn-primary btn-block mt-16" id="login-submit">Sign In</button>
+      </form>
+
+      <p class="helper-text" style="text-align:center;margin-top:20px;">
+        Access is managed by your administrator via Firebase Authentication.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

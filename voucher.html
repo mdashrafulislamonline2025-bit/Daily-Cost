@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vouchers · Expense Manager</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="voucher">
+<div class="app-shell">
+  <div class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">৳</div>
+      <div>
+        <div class="brand-name">Expense Manager</div>
+        <div class="brand-tag">Personal Ledger</div>
+      </div>
+    </div>
+
+    <div class="nav-group-label">Overview</div>
+    <a href="dashboard.html" class="nav-link" data-nav="dashboard">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>
+      Dashboard
+    </a>
+
+    <div class="nav-group-label">Manage</div>
+    <a href="payments.html" class="nav-link" data-nav="payments">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      Company Payment
+    </a>
+    <a href="expenses.html" class="nav-link" data-nav="expenses">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Add Expense
+    </a>
+    <a href="voucher.html" class="nav-link" data-nav="voucher">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 13h6M9 17h6"/></svg>
+      Vouchers
+    </a>
+    <a href="transactions.html" class="nav-link" data-nav="transactions">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      Transactions
+    </a>
+
+    <div class="nav-group-label">Insights</div>
+    <a href="reports.html" class="nav-link" data-nav="reports">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+      Reports
+    </a>
+    <a href="settings.html" class="nav-link" data-nav="settings">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+      Settings
+    </a>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="avatar">U</div>
+        <div class="user-chip-meta">
+          <div class="user-chip-name">Loading…</div>
+          <div class="user-chip-email"></div>
+        </div>
+      </div>
+      <button class="logout-btn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        Log Out
+      </button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="flex items-center gap-12">
+        <button class="icon-btn menu-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+        <div>
+          <div class="topbar-title">Vouchers</div>
+          <div class="topbar-sub">Upload and track reimbursement vouchers</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-btn theme-toggle" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="card card-pad" style="max-width:680px;margin-bottom:22px;">
+        <div class="section-head">
+          <div class="section-title">Add / Update Voucher</div>
+        </div>
+        <form id="voucher-form">
+          <div class="field mb-16">
+            <label>Voucher Image</label>
+            <div class="file-drop" id="voucher-file-drop">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+              <div style="font-weight:600;font-size:13px;">Click to upload a photo of the voucher</div>
+              <div class="helper-text">PNG or JPG, up to ~5MB</div>
+              <input type="file" id="voucher-file-input" accept="image/*" />
+            </div>
+            <div class="file-preview" id="voucher-file-preview"></div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="voucher-amount">Amount (৳)</label>
+              <input type="number" id="voucher-amount" step="0.01" min="0.01" placeholder="0.00" required />
+            </div>
+            <div class="field">
+              <label for="voucher-date">Date</label>
+              <input type="date" id="voucher-date" required />
+            </div>
+            <div class="field">
+              <label for="voucher-category">Expense Category</label>
+              <select id="voucher-category" required></select>
+            </div>
+            <div class="field">
+              <label for="voucher-status">Status</label>
+              <select id="voucher-status" required></select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="voucher-cancel-edit" class="btn btn-ghost hidden">Cancel Edit</button>
+            <button type="submit" class="btn btn-primary" id="voucher-submit">Save Voucher</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="section-head">
+        <div class="section-title">All Vouchers</div>
+        <div class="chip-select" id="voucher-status-filters">
+          <button class="chip status-filter-chip active" data-status="All">All</button>
+          <button class="chip status-filter-chip" data-status="Pending">Pending</button>
+          <button class="chip status-filter-chip" data-status="Submitted">Submitted</button>
+          <button class="chip status-filter-chip" data-status="Approved">Approved</button>
+          <button class="chip status-filter-chip" data-status="Rejected">Rejected</button>
+        </div>
+      </div>
+      <div id="voucher-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

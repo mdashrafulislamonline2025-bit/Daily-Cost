@@ -1,0 +1,23 @@
+rules_version = '2';
+
+// Expense Manager — Storage Security Rules
+// Voucher images are stored under /vouchers/{uid}/{fileName}.
+// Only the signed-in owner of that folder can upload to it, and any
+// signed-in user of the app can view voucher images (needed so the
+// voucher grid can render <img> previews).
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /vouchers/{userId}/{fileName} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null
+                   && request.auth.uid == userId
+                   && request.resource.size < 8 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
