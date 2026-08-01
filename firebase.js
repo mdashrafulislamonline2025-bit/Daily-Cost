@@ -45,14 +45,13 @@ import {
 // 1. Your Firebase project configuration
 // -------------------------------------------------------------------------
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyCZugUBWj-cef_VyorCeP29IeNLCQE1ga0",
+  authDomain: "expense-a2ce7.firebaseapp.com",
+  projectId: "expense-a2ce7",
+  storageBucket: "expense-a2ce7.firebasestorage.app",
+  messagingSenderId: "220119570575",
+  appId: "1:220119570575:web:8081c399bb8bf73b1138fa",
 };
-
 // -------------------------------------------------------------------------
 // 2. Initialize Firebase services
 // -------------------------------------------------------------------------
