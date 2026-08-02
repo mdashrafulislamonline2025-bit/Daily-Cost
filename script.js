@@ -19,7 +19,7 @@ import {
    0. Constants
    ------------------------------------------------------------------------- */
 const EXPENSE_CATEGORIES = ["রিকশা ভাড়া", "অটো ভাড়া", "বাস ভাড়া", "অন্যান্য"];
-const PAYMENT_METHODS = ["Cash", "Bank Transfer", "bKash", "Nagad", "Reimbursement", "Other"];
+const PAYMENT_METHODS = ["Cash", "Bank Transfer", "bKash", "Nagad", "Other"];
 const VOUCHER_STATUSES = ["Pending", "Submitted", "Approved", "Rejected"];
 const CURRENCY_SYMBOL = "৳";
 
@@ -308,8 +308,29 @@ function renderPieChart(expenses) {
     options: {
       cutout: "62%",
       plugins: {
-        legend: { position: "bottom", labels: { boxWidth: 10, boxHeight: 10, usePointStyle: true, pointStyle: "circle", font: { family: "Inter", size: 11.5, weight: "600" }, color: getComputedStyle(document.documentElement).getPropertyValue("--color-text-muted") } },
-        tooltip: { callbacks: { label: (ctx) => ` ${ctx.label}: ${money(ctx.raw)}` } },
+        legend: { 
+           position: "bottom",
+           labels: {
+              boxWidth: 10,
+              boxHeight: 10,
+              usePointStyle: true,
+              pointStyle: "circle",
+              font: {
+                 family: "Inter",
+                 size: 11.5,
+                 weight: "600"
+              },
+              color: getComputedStyle(document.documentElement).getPropertyValue("--color-text-muted") 
+           } 
+        },
+        tooltip: {
+           callbacks: {
+              label: (ctx) => ` ${
+                 ctx.label
+              }: ${money(ctx.raw)
+                 }`
+           } 
+        },
       },
       maintainAspectRatio: false,
     },
@@ -338,10 +359,43 @@ function renderBarChart(expenses) {
     data: { labels: months.map((m) => m.label), datasets: [{ data: totals, backgroundColor: primary, borderRadius: 8, maxBarThickness: 34 }] },
     options: {
       maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ` ${money(ctx.raw)}` } } },
+      plugins: {
+         legend: {
+            display: false 
+         }, 
+         tooltip: {
+            callbacks: {
+               label: (ctx) => ` ${money(ctx.raw)
+                                 }` 
+            } 
+         } 
+      },
       scales: {
-        x: { grid: { display: false }, ticks: { color: textColor, font: { family: "Inter", size: 11 } } },
-        y: { grid: { color: gridColor }, ticks: { color: textColor, font: { family: "Inter", size: 11 }, callback: (v) => CURRENCY_SYMBOL + v } },
+        x: {
+           grid: {
+              display: false 
+           },
+           ticks: {
+              color: textColor,
+              font: {
+                 family: "Inter",
+                 size: 11 
+              } 
+           } 
+        },
+        y: {
+           grid: {
+              color: gridColor 
+           },
+           ticks: {
+              color: textColor,
+              font: {
+                 family: "Inter",
+                 size: 11 
+              },
+              callback: (v) => CURRENCY_SYMBOL + v 
+           } 
+        },
       },
     },
   });
