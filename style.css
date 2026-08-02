@@ -168,15 +168,17 @@ img { max-width: 100%; display: block; }
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-info));
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff; font-family: var(--font-display);
   font-weight: 800;
   font-size: 18px;
-  box-shadow: 0 6px 16px -4px hsl(var(--color-shadow) / 0.45);
+  box-shadow: none;
   flex-shrink: 0;
+}
+   
 }
 .brand-mark img {
     width: 28px;
