@@ -167,7 +167,7 @@ img { max-width: 100%; display: block; }
 .brand-mark {
   width: 40px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: none;
   background: #FFFFFF;
   display: flex;
   align-items: center;
