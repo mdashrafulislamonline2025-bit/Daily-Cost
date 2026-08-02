@@ -177,9 +177,9 @@ img { max-width: 100%; display: block; }
    
 }
 .brand-mark img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+    width: 25px;
+    height: 25px;
+    object-fit: none;
 }
 
 .brand-name { 
