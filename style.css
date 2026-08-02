@@ -168,7 +168,7 @@ img { max-width: 100%; display: block; }
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ffffff, #ffffff);
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
